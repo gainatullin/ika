@@ -9,6 +9,7 @@ const RedGreenLight = () => {
     const [isMoving, setIsMoving] = useState(false);
     const [keysPressed, setKeysPressed] = useState(new Set());
     const [turningTimer, setTurningTimer] = useState(0);
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
     const [nextTurnTime, setNextTurnTime] = useState(0);
 
     const FINISH_LINE = 85; // позиция финиша
@@ -318,7 +319,7 @@ const RedGreenLight = () => {
                             }`}
                         >
                             <div className="relative">
-                                {dollFacing === 'right' ? <img src={require('./kukla.png')} width={100} height={130} /> : <img src={require('./kukla-back.png')} width={100} height={130} />}
+                                {dollFacing === 'right' ? <img src={require('./kukla.png')} width={isMobile ? 60 : 100} height={isMobile ? 70 : 130} /> : <img src={require('./kukla-back.png')} width={isMobile ? 60 : 100} height={isMobile ? 70 : 130}  />}
                                 {/*<div className="w-12 h-16 sm:w-16 sm:h-20 md:w-20 md:h-24 lg:w-24 lg:h-28 bg-gradient-to-b from-yellow-400 to-orange-500 rounded-lg border-2 border-orange-600 relative">*/}
                                 {/*    /!* Лицо куклы *!/*/}
                                 {/*    <div className="absolute top-2 left-1/2 transform -translate-x-1/2 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-pink-200 rounded-full border border-pink-400">*/}
@@ -340,7 +341,7 @@ const RedGreenLight = () => {
                             }`}
                             style={{ left: `${octopusPosition}%` }}
                         >
-                            <img src={require('./octo.png')} width={120} height={120} />
+                            <img src={require('./octo.png')} width={isMobile ? 70 : 120} height={isMobile ? 70 :120} />
                             {/*<div className="relative">*/}
                             {/*    <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 bg-gradient-to-b from-pink-400 to-pink-600 rounded-full border-2 border-pink-700 relative">*/}
                             {/*        /!* Глаза *!/*/}
