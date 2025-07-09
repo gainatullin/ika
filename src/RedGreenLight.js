@@ -87,7 +87,7 @@ const RedGreenLight = () => {
                         setDollFacing('left');
                         setTurningTimer(0);
                         // Следующий поворот через 3-6 секунд
-                        setNextTurnTime(Math.random() * 1000 + 2000);
+                        setNextTurnTime(Math.random() * 3000 + 3000);
                         return 0;
                     }
 
