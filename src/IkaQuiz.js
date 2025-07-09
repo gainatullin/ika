@@ -224,7 +224,7 @@ const IkaQuiz = () => {
                 <div className="mb-8">
                     <div className="flex justify-between items-center mb-2">
                         <span className="text-sm text-gray-400">Progress</span>
-                        <span className="text-sm text-gray-400">{currentQuestion + 1} из {questions.length}</span>
+                        <span className="text-sm text-gray-400">{currentQuestion + 1} of {questions.length}</span>
                     </div>
                     <div className="w-full bg-gray-700 rounded-full h-2">
                         <div
